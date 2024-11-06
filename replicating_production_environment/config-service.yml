@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+spec:
+  type: ClusterIP  # Expor o serviço internamente no cluster
+  ports:
+    - port: 80
+      targetPort: 8080  # Porta que o container está escutando
+  selector:
+    app: hello-world  # O seletor garante que o tráfego seja direcionado para o pod correto

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 3  # Aumentando a quantidade de réplicas para alta disponibilidade
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: hashicorp/http-echo
+        args:
+          - "-listen=:8080"
+          - "-text=Hello, Kubernetes!"
+        ports:
+          - containerPort: 8080
