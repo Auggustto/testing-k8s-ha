@@ -22,7 +22,7 @@ Aqui está a configuração do Deployment para a API. Para produção, é intere
 Arquivo: deploy-hello-world.yml<br>
 Comando para aplicar o Deployment:
 ```
-kubectl apply -f hello-world-service.yaml
+kubectl apply -f deploy-hello-world.yml
 ```
 
 ### 5. Configuração do Ingress para Roteamento de Tráfego Externo
@@ -30,7 +30,7 @@ Agora, configuramos o Ingress para expor a API com o domínio hello-world.local.
 Arquivo: config-external-traffic-routing.yml<br>
 Comando para aplicar o Ingress:
 ```
-kubectl apply -f hello-world-ingress.yaml
+kubectl apply -f onfig-external-traffic-routing.yml
 ```
 
 ### 6. Adicionando o hello-world.local ao Arquivo de Hosts (Somente para Teste Local)
