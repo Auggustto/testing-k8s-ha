@@ -1,0 +1,9 @@
+version: '3'
+services:
+  kind-control-plane:
+    image: kindest/node:v1.27.3
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
